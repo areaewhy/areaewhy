@@ -118,20 +118,14 @@ var cfFns = {
 				this.settings.resourcesLoaded = true;
 		},
 		noResults : function(){
-				
+			// if there's nothing to load, fade out gif, replace with message 
 			$('.loader').animate({opacity:0},100,function(){
 				$(this).html(cfFns.settings.noResultsText)
-					   .css('background-color','rgb(218, 163, 163)')
-					   .css('top','50%');
+					   .css('background-color','rgb(218, 163, 163)') // salmon?
+					   .css('top','50%'); // height issue -- gif is lower than center of text field 
 				$(this).animate({opacity:1},100);
 			});
-				// if there's nothing to load 
-				/*$('.loader').html(this.settings.noResultsText)
-							.css('background-color','rgba(218, 163, 163,0.3)')
-							.animate({
-								opacity: 1
-							},300);*/
-				
+			
 				// set focus back to search bar
 				$('#q').focus(); 
 		},
