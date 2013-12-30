@@ -11,9 +11,8 @@
 	box-shadow: 0px 0px 2px 2px #757373;
 }
 
-#showContents {
-    position: relative;
-    text-align:center;
+#showContent {
+    margin-top: 8px;
 }
 
 .artist {
