@@ -1,0 +1,415 @@
+﻿
+
+/* Global Styles */
+
+/*!!!!!! NOTE !!!!!!!! 
+This width controls entire widget width */
+.mnd-mdx2 { font: 12px Arial, Helvetica, sans-serif; color: #333; }
+
+.mnd-mdx2 a { color: #0099FF; text-decoration: none; }
+.mnd-mdx2 a:hover { text-decoration: underline; }
+.mnd-mdx2 h1 { font-size: 24px; color: #336699; text-decoration: none; margin: 5px 0 5px 21px; display:inline; }
+
+
+/* Shopping Cart Styles */
+.mnd-mdx2 .mnd-cart { background-image: url(images/medianet/cart_sm.png); background-repeat: no-repeat; background-position: 55% 0px; margin: 4px 8px 0 5px; padding: 17px 0 0 0; font-size: 10px; color: #999; float: right; cursor: pointer;}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Tabs !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.mnd-mdx2 .mnd-tabs-holder { margin-bottom: -1px; overflow: auto; line-height: 15px; clear: both; }
+
+/* Inactive Tab Styles */
+.mnd-mdx2 .mnd-inactivetab { cursor: pointer; }
+.mnd-mdx2 .mnd-inactivetab .mnd-tableft { background-image: url(images/medianet/mn_wc_tab2_off_lft.png); width: 7px; height: 37px; float: left; }
+.mnd-mdx2 .mnd-inactivetab .mnd-tabright { background-image: url(images/medianet/mn_wc_tab2_off_rt.png); width: 7px; height: 37px; float: left; }
+.mnd-mdx2 .mnd-inactivetab .mnd-tabcontent { background: url(images/medianet/mn_wc_tab2_off_mid.png) repeat-x; width: 150px; height: 37px; float: left; }
+
+/* Active Tab Styles */
+.mnd-mdx2 .mnd-activetab { }
+.mnd-mdx2 .mnd-activetab .mnd-tableft { background-image: url(images/medianet/mn_wc_tab2_on_lft.png ); width: 7px; height: 37px; float: left; }
+.mnd-mdx2 .mnd-activetab .mnd-tabright { background-image: url(images/medianet/mn_wc_tab2_on_rt.png ); width: 7px; height: 37px; float: left; }
+.mnd-mdx2 .mnd-activetab .mnd-tabcontent { background: url(images/medianet/mn_wc_tab2_on_mid.png) repeat-x; width: 150px; height: 37px; float: left; }
+
+/* Tab Content */
+.mnd-mdx2 .mnd-tabhead { margin-top: 3px; color: #336699; font-weight: bold; font-size: 12px; }
+.mnd-mdx2 .mnd-tabsubhead { color: #0099FF; font-size: 11px; font-weight: normal; }
+.mnd-mdx2 .mnd-tabhead, .mnd-mdx2 .mnd-tabsubhead { margin-left: 2px; }
+
+.mnd-mdx2 .mnd-tabspacer { border-bottom: 1px solid #ccc; float: left; height: 36px; width: 5px; }
+
+/*!!!!!! NOTE !!!!!!!! 
+If the width of the tabs are changed .mnd-top-line must be adjusted to compensate */
+.mnd-mdx2 .mnd-top-line { border-bottom: 1px solid #ccc; margin-left: 501px; }
+.mnd-mdx2 .mnd-top-line-tabless { border-bottom: 1px solid #ccc; clear: both; }
+
+
+/* Search Bar */
+.mnd-mdx2 .mnd-search-wrap { height: 46px; margin: 5px 0 16px 0; }
+.mnd-mdx2 .mnd-search-wrap .mnd-search-lft { height: 46px; width: 10px; float: left; background: url(images/medianet/mn_wc_mx1-search-lft.png) no-repeat; }
+.mnd-mdx2 .mnd-search-wrap .mnd-search-rt { height: 46px; background: url(images/medianet/mn_wc_mx1-search-rt.png) repeat-x right; margin-left: 6px; }
+
+.mnd-mdx2 .mnd-search-wrap .mnd-search-bar { height: 30px; float: left; border: 1px solid #ccc; background-color: #FFF; margin-top: 7px; padding-left: 10px; font: normal 14px Arial, Helvetica, sans-serif; }
+.mnd-mdx2 .mnd-search-wrap .mnd-search-btn { height: 30px; width: 70px; background: url(images/medianet/mn_wc_mx1-search-btn.png) no-repeat; float: right; margin: 8px 8px 0 0; cursor: pointer; }
+
+.mnd-mdx2 .mnd-search-wrap .mnd-search-title { padding:0; margin:0; font-weight: bold; color: #336699; margin-right:3px; height:29px; line-height:29px; float:left; }
+.mnd-mdx2 .mnd-search-wrap .mnd-search-criteria { padding:0; margin:0; background-color:#FFFFFF; border: 0; font:14px Arial,Helvetica,sans-serif; float:left; width:436px; display:inline-block; height:29px; line-height:29px;}
+
+/* Search Bar Search Results Filter View */
+.mnd-mdx2 .mnd-search-wrap-filter { height: 86px; margin: 0 0 16px 0; position: relative; }
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-search-lft { height: 86px; width: 10px; float: left; background: url(images/medianet/mn_wc_mx1-search-filter-lft.png) no-repeat; }
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-search-rt { height: 86px; background: url(images/medianet/mn_wc_mx1-search-filter-rt.png) repeat-x right; margin-left: 6px; }
+
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-search-options { height: 20px; width: 550px; position: absolute; top: 54px; left: 11px; margin-left: 13px; /*border: 1px solid #f00;*/ }
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-search-options .mnd-search-title { float: left; font-size: 14px; margin: 2px 49px 0 0; line-height:normal; }
+
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-filter-item { float: left; margin-right: 40px; /*border:1px solid #f00;*/ }
+
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-search-bar { height: 30px; float: left; border: 1px solid #ccc; background-color: #FFF; margin-top: 7px; padding-left: 10px; font: normal 14px Arial, Helvetica, sans-serif; }
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-search-btn { height: 30px; width: 70px; background: url(images/medianet/mn_wc_mx1-search-btn.png) no-repeat; float: right; margin: 8px 8px 0 0; cursor: pointer; }
+
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-search-title { padding:0; margin:0; font-weight: bold; color: #336699; margin-right:3px; height:29px; line-height:29px; float:left; }
+.mnd-mdx2 .mnd-search-wrap-filter .mnd-search-criteria {  padding:0; margin:0; background-color:#FFFFFF; border: 0; font:14px Arial,Helvetica,sans-serif; float:left; width:436px; display:inline-block; height:29px; line-height:29px; }
+
+/*////////////////////// End - Search //////////////////////*/
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Bread Crumbs !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.mnd-bread-wrap { display: none; }
+.mnd-mdx2 .mnd-bread-wrap { font: 18px Arial, Helvetica, sans-serif; padding: 5px 0 13px 0; margin-left: 22px; /*border: 1px solid #f00;*/ }
+.mnd-mdx2 .mnd-bread-wrap a { color: #0099FF; }
+.mnd-mdx2 .mnd-bread-wrap a:active { color: #0099FF; }
+.mnd-mdx2 .mnd-bread-wrap a:visited { color: #0099FF; }
+.mnd-mdx2 .mnd-bread-wrap a:hover { color: #0099FF; text-decoration: underline; }
+
+.mnd-mdx2 .mnd-bread-wrap ul { padding: 0 0; margin: 0 0 0 0; }
+.mnd-mdx2 .mnd-bread-wrap li { float: left; overflow: hidden; }
+.mnd-mdx2 .mnd-bread-wrap li.mnd-crumb { margin: 5px 7px 0 7px; width: 7px; height: 14px; background: url(images/medianet/mn_wc_mx1_bc_crumb.png) center no-repeat; background-position: 0 0; }
+.mnd-mdx2 .mnd-bread-wrap li.mnd-crumb span { display: none; }
+
+.mnd-mdx2 .mnd-bread-wrap li .search-term { font-weight: bold; }
+
+/*////////////////////// End - Bread Crumbs //////////////////////*/	
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Elements exclusive to the Main Tab  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.mnd-mdx2 .mnd-tabcontent-main .top-wrap { padding:14px 15px 4px 15px; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-table-header { float:left; clear:both; height:20px; width: 300px; margin: 0 0 15px 18px;}
+.mnd-mdx2 .mnd-tabcontent-main .mnd-table-header h2 { color: #336699; font-size: 16px; font-weight: bold; line-height: normal; padding:0; display:inline; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-table-header h3 { color: #336699; font-size: 12px; font-weight: bold; line-height: normal; padding:0; margin:0; display:inline; }
+
+/* Genre Filter */
+.mnd-mdx2 .mnd-tabcontent-main .mnd-filter-item { float:right; margin-right:15px; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-filter-item, .mnd-mdx2 .mnd-tabcontent-main .mnd-table-header { padding-top:28px;}
+
+/*////////////////////// Today's Buzz & Song of the Day Top Section  //////////////////////*/
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-lft-col { float: left; height: 355px; width: 350px; clear: both; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-lft-col h1 { display:inline-block; color: #336699; font-size: 20px; font-weight: normal; line-height: normal; padding:0; margin: 12px 0 0 19px; }
+
+/* Song of the Day */
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-rt-col { float: left; height: 355px; width: 240px; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-rt-col h1 { display:inline-block; color: #336699; font-size: 20px; font-weight: normal; line-height: normal; padding:0; margin: 12px 0 10px 10px; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd { height: 308px; width: 190px; background: url(images/medianet/mn-wc-sotd-bg.png) no-repeat; padding: 20px 25px 0 25px; font: bold 11px Arial, Helvetica, sans-serif; color: #6e6e6e; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-date { text-align: center; height: 20px; border-bottom: 1px solid #ccc; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-album-art { height: 75px; width: 75px; border: 1px solid #ccc; margin-top: 10px; float: left; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-artist-name { font-size: 12px; font-weight: normal; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-track-title { font-size: 12px; font-weight: bold; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-artist-name, .mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-track-title { margin-left: 85px; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-track-title { margin-top: 10px; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-buy-btn { font-size: 12px; height: 24px; width: 100px; background: url(images/medianet/mn-wc-sotd-btn.png) no-repeat; margin: 12px 0 0 6px; padding-left: 7px; line-height: 22px; font-weight: normal; float: left; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-buy-btn a { color: #FFF; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-track-price { font-weight: bold; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-txt { margin-top:8px; height: 80px; font-weight: normal; font-size:10px; }
+
+/*.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-txt-up { height: 22px; background: url(images/medianet/sotd/mn-wc-sotd-txt-up.png) center no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-sotd-txt-down { height: 22px; background: url(images/medianet/sotd/mn-wc-sotd-txt-dwn.png) center no-repeat; cursor: pointer; }*/
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-playerbar { height: 20px; background: url(images/medianet/mn_wc_1_bg.gif) bottom repeat-x; border-left: 1px solid #CCEBFD; border-bottom: 1px solid #CCEBFD; border-top: 1px solid #CCEBFD; margin: 58px 0 3px 0; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-playerbar .mnd-playbutton { height: 20px; width: 20px; float: right; background: url(images/medianet/mn_wc_1_btn_play_sml.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-playerbar .mnd-pausebutton { height: 20px; width: 20px; float: right; background: url(images/medianet/mn_wc_1_btn_pause_sml.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-playerbar .mnd-viewbutton { height: 20px; width: 20px; float: right; background: url(images/medianet/mn_wc_1_btn_view_sml.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-sotd .mnd-playerbarcontent { margin: 0 0 0 5px; font-size: 12px; font-weight: bold; color: #333; line-height: 21px; }
+
+/* Today's Buzz */
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today { height: 93px; padding: 15px 20px 0 20px; background: url(images/medianet/mn_wc_mx1_dashed_line.jpg) bottom no-repeat; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-player-album-art { border: 1px solid #666; width: 75px; height: 75px; float: left; margin-right: 5px; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-player-artist-art { background:#dcdbdb; border: 1px solid #999; width: 62px; height: 75px; float: left; margin-right: 5px; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-title { color: #9c9c9c; font-size: 12px; font-weight: bold; margin:0 0 0 80px; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-title a, .mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-title a:active, .mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-title a:visited { color: #9c9c9c; text-decoration: underline; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-title a:hover { color: #0099FF; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-artist-name { color: #666; font-size: 14px; font-weight: bold; margin:0 0 0 80px; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-artist-name a, .mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-artist-name a:active, .mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-artist-name a:visited { color: #666; text-decoration: underline; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-artist-name a:hover { color: #0099FF; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-view-text { color: #9c9c9c; font-size: 12px; font-weight: bold; margin:0 0 0 80px; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-view-text a, .mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-view-text a:active, .mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-view-text a:visited { color: #9c9c9c; text-decoration: underline; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-view-text a:hover { color: #0099FF; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-track-num-play { display: inline; }
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-more-info { font-size: 10px; }
+
+.mnd-mdx2 .mnd-tabcontent-main .mnd-main-today .mnd-active-artist-bio { margin:3px 0 0 80px; }
+/*////////////////////// End - Elements exclusive to the Main Tab  //////////////////////*/
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Elements exclusive to the Album Tab  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-wrap { padding: 20px 0 10px 35px; min-height: 190px; }
+
+/* Paging */
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-paging-top { height: 15px; clear: both; padding: 10px 15px 0 15px; /*border: 1px solid #f00;*/ }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-paging-bottom { height: 15px; clear: both; padding: 0 15px 10px 15px; /*border: 1px solid #f00;*/ }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-prev-pg { }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-prev-pg a { color: #0099FF; font-size: 12px; font-weight: normal; text-decoration: none; }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-prev-pg a:hover { text-decoration: underline; }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-next-pg { float: right; }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-next-pg a { color: #0099FF; font-size: 12px; font-weight: normal; text-decoration: none; }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-next-pg a:hover { text-decoration: underline; }
+
+/* Album Result */
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album { width: 185px; height: 90px; float: left; vertical-align: top; cursor: pointer; margin-right: 5px; }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album .mnd-album-image-med { float: left; margin: 5px 0 10px 0; }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album .mnd-album-title-small { width: 100px; line-height: 14px; font-size: 11px; float: left; margin-left: 5px; }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-link { color: #0099FF; font-size: 11px; font-weight: bold; }
+.mnd-mdx2 .mnd-tabcontent-albums .mnd-album-hilite { background-color: #EEE; }
+/*////////////////////// End - Elements exclusive to the Album Tab  //////////////////////*/
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Elements exclusive to the Bio Tab  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/* Text */
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-bio-txt { margin: 10px 12px 10px 0; color: Black; font-size: 12px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-album-title { color: #000; font-size: 1em; font-weight: bold; line-height: 14px; margin: 0 0 4px 84px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-artist-name { color: #999; font-size: 1em; font-weight: bold; margin: 0 0 4px 84px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-all-songs { float: left; padding: 0 5px 0 3px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-bio-name { color: #333; font-size: 16px; font-weight: bold; }
+
+/* Table Styles */
+.mnd-mdx2 .mnd-tabcontent-bio .table-wrap { padding: 16px 0 0 0; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-table-header { clear: both; padding-top: 25px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-table-header h2 { color: #336699; font-size: 16px; font-weight: bold; line-height: normal; padding: 0; margin: 0 0 0 0; display: inline; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-table-header h3 { color: #336699; font-size: 12px; font-weight: bold; line-height: normal; padding: 0; margin: 0 0 0 0; display: inline; }
+
+/* Featured Track/Album Player  */
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-popular-album { font-weight: bold; font-size: 14px; margin: 20px 0 10px 0; clear: both; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-player-album-art { border: 1px solid #666; width: 75px; height: 75px; float: left; margin: 0 5px 0 0; }
+
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-playerbar { height: 26px; background: url(images/medianet/mn_wc_1_bg.gif) bottom repeat-x; border-left: 1px solid #CCEBFD; border-bottom: 1px solid #CCEBFD; border-top: 1px solid #CCEBFD; margin: 6px 155px 7px 85px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-playerbar .mnd-playbutton { height: 26px; width: 26px; float: right; background: url(images/medianet/mn_wc_1_btn_play_lrg.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-playerbar .mnd-pausebutton { height: 26px; width: 26px; float: right; background: url(images/medianet/mn_wc_1_btn_pause_lrg.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-playerbar .mnd-viewbutton { height: 26px; width: 26px; float: right; background: url(images/medianet/mn_wc_1_btn_view_lrg.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-playerbarcontent { margin: 0 0 0 5px; font-size: 12px; font-weight: bold; color: #333; line-height: 26px; }
+
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-title { color: #9c9c9c; font-size: 12px; font-weight: bold; margin: 0 0 0 86px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-title a, .mnd-mdx2 .mnd-tabcontent-bio .mnd-active-title a:active, .mnd-mdx2 .mnd-tabcontent-bio .mnd-active-title a:visited { color: #9c9c9c; text-decoration: underline; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-title a:hover { color: #0099FF; }
+
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-artist-name { color: #666; font-size: 14px; font-weight: bold; margin: 0 0 0 86px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-artist-name a, .mnd-mdx2 .mnd-tabcontent-bio .mnd-active-artist-name a:active, .mnd-mdx2 .mnd-tabcontent-bio .mnd-active-artist-name a:visited { color: #666; text-decoration: underline; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-artist-name a:hover { color: #0099FF; }
+
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-view-text { color: #9c9c9c; font-size: 12px; font-weight: bold; margin: 0 0 0 86px; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-view-text a, .mnd-mdx2 .mnd-active-view-text a:active, .mnd-mdx2 .mnd-tabcontent-bio .mnd-active-view-text a:visited { color: #9c9c9c; text-decoration: underline; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-active-view-text a:hover { color: #0099FF; }
+
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-track-num-play { display: inline; }
+
+/*.mnd-mdx2 .mnd-tabcontent-bio .mnd-player-book-wrap { width: 75px; float: left; }
+.mnd-mdx2 .mnd-tabcontent-bio .mnd-player-book-art img { border: 1px solid #666; display: block; margin-left: auto; margin-right: auto; }*/
+
+/*////////////////////// End - Elements exclusive to the Bio Tab  //////////////////////*/
+
+
+/* Shared between Bio/Review Tab */
+.mnd-mdx2 .mnd-review-txt div, .mnd-mdx2 .mnd-bio-txt div { margin: 10px 0; line-height: 17px; }
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Elements exclusive to the Album Review/All Songs Tab  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/* Text */
+.mnd-mdx2 .mnd-tabcontent-albumtracks .mnd-review-txt { margin: 10px 12px 10px 0; color: Black; font-size: 12px; }
+.mnd-mdx2 .mnd-tabcontent-albumtracks .mnd-active-album-title { color: #000; font-size: 1em; font-weight: bold; line-height: 14px; margin: 0 0 4px 84px; }
+.mnd-mdx2 .mnd-tabcontent-albumtracks .mnd-active-artist-name { color: #999; font-size: 1em; font-weight: bold; margin: 0 0 4px 84px; }
+.mnd-mdx2 .mnd-tabcontent-albumtracks .mnd-all-songs { float: left; padding: 3px 5px 0 0; }
+
+/* Table Styles */
+.mnd-mdx2 .mnd-tabcontent-albumtracks .table-wrap { padding: 16px 0 0 0; }
+.mnd-mdx2 .mnd-tabcontent-albumtracks .mnd-table-header { clear: both; padding-top: 28px; }
+.mnd-mdx2 .mnd-tabcontent-albumtracks .mnd-table-header h2 { color: #336699; font-size: 16px; font-weight: bold; line-height: normal; padding: 0; margin: 0 0 0 5px; display: inline; }
+.mnd-mdx2 .mnd-tabcontent-albumtracks .mnd-table-header h3 { color: #336699; font-size: 12px; font-weight: bold; line-height: normal; padding: 0; margin: 0 0 0 0; display: inline; }
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Elements exclusive to the Search Tab  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.mnd-mdx2 .mnd-tabcontent-search { padding: 0px 15px 4px 15px; }
+
+.mnd-mdx2 .mnd-tabcontent-search .mnd-search-option { float: left; margin: 20px 21px 0 9px; }
+.mnd-mdx2 .mnd-tabcontent-search .mnd-search-option h2 { color: #333; font-size: 12px; font-weight: bold; line-height: normal; padding: 0; display: inline; }
+
+.mnd-mdx2 .mnd-tabcontent-search .table-wrap { padding: 16px 0 0 0; display: inline-block; }
+
+.mnd-mdx2 .mnd-tabcontent-search .mnd-table-header { float: left; width: 390px; margin: 0 0 0 4px; padding-top: 28px; clear: both; /*border: solid 1px #f00;*/ }
+.mnd-mdx2 .mnd-tabcontent-search .mnd-table-header h2 { color: #336699; font-size: 16px; font-weight: bold; line-height: normal; margin: 0; }
+
+.mnd-mdx2 .mnd-tabcontent-search .mnd-results-all { float: right; width: 150px; padding-top: 32px; color: #333; font-weight: normal; line-height: normal; text-align: right; font-size:14px; }
+
+/*.mnd-mdx2 .mnd-tabcontent-search .mnd-result-paging { float: right; width: 100px; color: #0099FF; font-weight: normal; line-height: normal; text-align: right; border: solid 1px #f00; display:inline;}*/
+/*.mnd-mdx2 .mnd-tabcontent-search .mnd-results-totals { float: left; width: 140px; color: #333; font-weight: bold; line-height: normal; margin: 0 0 0 5px; border: solid 1px #f00; }*/
+
+/*////////////////////// active row styles  //////////////////////*/
+
+/* Table Styles */
+.mnd-mdx2 tr.mnd-row-active th { padding: 8px 0 8px 5px; }
+.mnd-mdx2 tr.mnd-row-active td { padding: 8px 0 8px 5px; height: 145px; }
+
+.mnd-mdx2 tr.mnd-row-active td.tbl-num-col { vertical-align: top; }
+.mnd-mdx2 tr.mnd-row-active td.tbl-artist-col { vertical-align: top; padding-right: 12px; }
+.mnd-mdx2 tr.mnd-row-active td.tbl-price-col { vertical-align: top; padding-top: 50px; }
+.mnd-mdx2 tr.mnd-row-active td.tbl-buy-col { vertical-align: top; padding-top: 46px; }
+
+.mnd-mdx2 tr.mnd-row-active td.tbl-price-col div { margin-bottom: 18px; }
+.mnd-mdx2 tr.mnd-row-active td.tbl-buy-col div { margin-bottom: 15px; }
+
+.mnd-mdx2 tr.mnd-row-active td.tbl-title-col .mnd-album-art { width: 150px; height: 150px; float: left; border: 1px solid #666; }
+
+/* Player */
+.mnd-mdx2 .mnd-row-active .mnd-playerbar { height: 26px; background: url(images/medianet/mn_wc_1_bg.gif) bottom repeat-x; border-left: 1px solid #CCEBFD; border-bottom: 1px solid #CCEBFD; border-top: 1px solid #CCEBFD; margin: 37px 10px 6px 165px; }
+.mnd-mdx2 .mnd-row-active .mnd-playerbar .mnd-playbutton { height: 26px; width: 26px; float: right; background: url(images/medianet/mn_wc_1_btn_play_lrg.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-row-active .mnd-playerbar .mnd-pausebutton { height: 26px; width: 26px; float: right; background: url(images/medianet/mn_wc_1_btn_pause_lrg.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-row-active .mnd-playerbar .mnd-viewbutton { height: 26px; width: 26px; float: right; background: url(images/medianet/mn_wc_1_btn_view_lrg.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-row-active .mnd-playerbarcontent { margin: 0 0 0 5px; font-size: 12px; font-weight: bold; color: #333; line-height: 27px; }
+
+.mnd-mdx2 .mnd-row-active .mnd-active-title { color: #333; font-size: 12px; font-weight: bold; line-height:18px; }
+.mnd-mdx2 .mnd-row-active .mnd-active-title a, .mnd-mdx2 .mnd-row-active .mnd-active-title a:active, .mnd-mdx2 .mnd-row-active .mnd-active-title a:visited { color: #333; text-decoration: underline; }
+.mnd-mdx2 .mnd-row-active .mnd-active-title a:hover { color: #0099FF; }
+
+.mnd-mdx2 .mnd-row-active .mnd-active-artist-name { color: #9c9c9c; font-size: 12px; font-weight: normal; }
+.mnd-mdx2 .mnd-row-active .mnd-active-artist-name a, .mnd-mdx2 .mnd-row-active .mnd-active-artist-name a:active, .mnd-mdx2 .mnd-row-active .mnd-active-artist-name a:visited { color: #9c9c9c; text-decoration: underline; }
+.mnd-mdx2 .mnd-row-active .mnd-active-artist-name a:hover { color: #0099FF; }
+
+.mnd-mdx2 .mnd-row-active .mnd-active-title, .mnd-mdx2 .mnd-row-active .mnd-active-artist-name { margin-left: 165px; }
+.mnd-mdx2 .mnd-row-active .mnd-track-num-play { display: inline; }
+/*////////////////////// End - Active row styles  //////////////////////*/
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Styles Shared Across Multiple Pages  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/* Misc Page Margin/Padding */
+.mnd-mdx2 .mnd-tabcontent-bio, .mnd-mdx2 .mnd-tabcontent-bio, .mnd-mdx2 .mnd-tabcontent-albumtracks { padding: 16px 15px 4px 15px; }
+
+/* Other */
+.mnd-mdx2 .mnd-contentarea { position: relative; border-right: 1px solid #ccc; border-left: 1px solid #ccc; padding: 3px; background-color: #fff; clear: both; }
+
+/* Play & Pause Btns */
+.mnd-mdx2 .mnd-playbutton { margin:0 auto; height: 20px; width: 20px; background: url(images/medianet/mn_wc_1_btn_play_sml.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-pausebutton { margin:0 auto; height: 20px; width: 20px; background: url(images/medianet/mn_wc_1_btn_pause_sml.gif); background-repeat: no-repeat; cursor: pointer; }
+.mnd-mdx2 .mnd-viewbutton { margin:0 auto; height: 20px; width: 20px; background: url(images/medianet/mn_wc_1_btn_view_sml.gif); background-repeat: no-repeat; cursor: pointer; }
+
+/* Album & Bio Images */
+.mnd-album-image-lrg { height: 150px; }
+.mnd-mdx2 .mnd-album-image-lrg { margin: 0 15px 0 0; float: left; background: #fff url(images/medianet/mn-www-no-image-sml.gif) center no-repeat; min-width:80px; min-height:100px; margin-bottom:5px; }
+.mnd-mdx2 .mnd-album-image-lrg img { border: 0; padding:0; margin:0; float:left; }
+
+/*.mnd-mdx2 .mnd-album-image-small { margin: 0 15px 5px 0; float: left; }
+.mnd-mdx2 .mnd-album-image-small img { border: 0; }
+.mnd-mdx2 .mnd-album-image-med { height: 75px; width: 75px; border: 1px solid #000; }
+.mnd-mdx2 .mnd-album-image-med img { border: 0; }*/
+
+/* Various Text Styles */
+.mnd-mdx2 .mnd-album-title { font-size: x-large; }
+.mnd-mdx2 .mnd-album-title-small, .mnd-mdx2 .mnd-bio { color: #333; font-size: 12px; font-weight: bold; }
+.mnd-mdx2 .mnd-artist-name { font-size: large; }
+
+.mnd-tr-albumpurchase { visibility: hidden; }
+.mnd-mdx2 .mnd-tr-albumpurchase { float: right; }
+.mnd-mdx2 .mnd-album-dl { font-weight: bold; margin: 0 8px 0 5px; }
+.mnd-mdx2 .mnd-album-price { margin: 0 8px 0 5px; text-align: right; }
+
+.mnd-mdx2 .mnd-track-num { display: inline; color: #999999; font-size: 12px; font-weight: bold; }
+.mnd-mdx2 .mnd-tracktitle { padding: 0px 5px 0 0px; font-weight: bold; }
+.mnd-mdx2 .mnd-track-price { }
+
+.mnd-mdx2 .mnd-more-link { color: #0099FF; font-weight: bold; }
+.mnd-mdx2 .mnd-more-link:hover { text-decoration: underline; }
+
+.mnd-mdx2 .tbl-on-album { font-size: 11px; }
+
+.mnd-mdx2 .tbl-label-title { margin:0 auto; }
+.mnd-mdx2 .tbl-label-play { margin:0 auto; } 
+.mnd-mdx2 .tbl-label-buy { margin:0 auto; }
+.mnd-mdx2 .tbl-label-price { margin:0 auto; }
+
+/* Buy Buttons */
+.mnd-mdx2 .mnd-buy-track { width: 76px; height: 19px; line-height: 19px; font-size: 10px; text-align: center; background-image: url('images/medianet/mn_wc_mx1_btn_bg_blue.png'); background-repeat: no-repeat; background-position: 0 0; padding: 0; margin:0 auto; }
+/*.mnd-mdx2 .mnd-buy-track a:hover { color: #F00; border:1px solid #f00;}*/
+
+.mnd-mdx2 .mnd-buy-album { width: 76px; height: 19px; line-height: 19px; font-size: 10px; text-align: center; background-image: url('images/medianet/mn_wc_mx1_btn_bg_green.png'); background-repeat: no-repeat; background-position: 0 0; padding:0; margin:0 auto; }
+/*.mnd-mdx2 .mnd-buy-album a, .mnd-mdx2 .mnd-buy-album a:hover, .mnd-mdx2 .mnd-buy-album a:visited, .mnd-mdx2 .mnd-buy-album a:active { color: #FFF; }*/
+
+/*!!!!!! NOTE !!!!!!!! 
+This appears only when a track or albums is currently unavailble. This style also controls "Album Only"*/
+.mnd-mdx2 .mnd-unavailable { color: #999; font: 11px Arial, Helvetica, sans-serif; font-weight: bold; padding: 3px 0 0 0; }
+/*.mnd-mdx2 .mnd-album-only { color: #999; font: 11px Arial, Helvetica, sans-serif; font-weight: bold; padding: 3px 0 0 0; }*/
+
+
+/* Table Styles */
+.mnd-mdx2 .table-wrap { clear: both; width: 100%; }
+
+.mnd-mdx2 table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 0; padding: 0; border-left: 0px; border-right: 0px; }
+.mnd-mdx2 th { color: #999999; font-size: 10pt; font-weight: bold; white-space: nowrap; border: 0px; padding: 1px 0 1px 3px; }
+.mnd-mdx2 td { }
+.mnd-mdx2 td.hlt { background-color: #EEE; }
+
+.mnd-mdx2 .bordered th { border-bottom: solid 1px #ddd; border-top: solid 1px #ddd; padding-top: 2px; padding-bottom: 2px; }
+.mnd-mdx2 .bordered td { border-bottom: solid 1px #ddd; padding: 5px 0 5px 0; vertical-align: middle; border-left: 0px; border-right: 0px; }
+
+.mnd-mdx2 th.tbl-num-col, .mnd-mdx2 td.tbl-num-col { width: 4%; text-align: center; }
+.mnd-mdx2 th.tbl-title-col, .mnd-mdx2 td.tbl-title-col { width: 33%; text-align: left; padding:0 10px 0 0; }
+.mnd-mdx2 th.tbl-artist-col, .mnd-mdx2 td.tbl-artist-col { width: 31%; text-align: left; }
+
+.mnd-mdx2 th.tbl-play-col, .mnd-mdx2 td.tbl-play-col { width: 8%; text-align: center; }
+.mnd-mdx2 th.tbl-price-col, .mnd-mdx2 td.tbl-price-col { width: 8%; text-align: center; }
+.mnd-mdx2 th.tbl-buy-col, .mnd-mdx2 td.tbl-buy-col { width: 16%; text-align: center; }
+.mnd-mdx2 td.tbl-buy-col a, .mnd-mdx2 td.tbl-buy-col a:hover, .mnd-mdx2 td.tbl-buy-col a:active, .mnd-mdx2 td.tbl-buy-col a:visited { color: #333; }
+
+.mnd-mdx2 tr.mnd_row { background-color:#FFF; cursor:pointer; }
+.mnd-mdx2 tr.mnd_row:hover { background-color: #ebebeb; }
+
+.mnd-mdx2 tr.mnd-altrow { background:#f2f2f2; cursor:pointer; }
+.mnd-mdx2 tr.mnd-altrow:hover { background-color:#ebebeb; }
+
+.mnd-mdx2 tr.mnd-footrow { background:#f8ffe1; height: 35px; }
+
+.mnd-mdx2 .table-wrap { clear: both; width: 100%; }
+
+/* Footer Styles */
+.mnd-mdx2 .mnd-foot-wrap { height: 30px; margin: 0 0 12px 0; font-size: 11px; border-top: solid 1px #ddd; }
+.mnd-mdx2 .mnd-foot-wrap img { border: 0; }
+.mnd-mdx2 .mnd-foot-wrap .mnd-foot-lft { height: 30px; width: 5px; float: left; background: url(images/medianet/mn_wc_bottom_lft.png) no-repeat; }
+.mnd-mdx2 .mnd-foot-wrap .mnd-foot-rt { height: 30px; background: url(images/medianet/mn_wc_bottom_rt.png) repeat-x right; margin-left: 5px; }
+
+.mnd-mdx2 .mnd-amg { text-align: left; padding: 8px 0 8px 15px; font-size: 10px; color: #999; clear: both; }
+.mnd-mdx2 .mnd-amg span { color: #999999; font-size: 8pt; vertical-align: top; }
+
+/* Misc Styles */
+.mnd-mdx2 .mnd-ellipsis { overflow: hidden; text-overflow: ellipsis; -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; white-space: nowrap; display: block; }
+
+.mnd-mdx2 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.mnd-mdx2 .clearfix { display: inline-block; }
+
+/* Hide from IE Mac */
+.mnd-mdx2 .clearfix { display: block; }
+
+
+/*////////////////////// End - Styles Shared Across Multiple Pages  //////////////////////*/

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src = "//code.jquery.com/jquery-1.10.2.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>BM Search test</title>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+var parse = {
+		result: "",
+		go: function(){
+			$.get('prox.php',function(result){
+			parse.result = $(result);
+			parse.process($(result));
+			})
+		},
+		process : function(doc){
+			var collection = [];
+			for (var i = 0; i < doc.length; i++){
+					var title = $.trim(doc.find('.description a').eq(i).html());
+					var item = $.trim(doc.find('.description a').eq(i).attr('href'));
+					var image = $.trim(doc.find('.picture img').eq(i).attr('src'));
+					var artist = $.trim(doc.find('.product-artist').eq(i).html());
+					var price = doc.find('.product-variant-price-list').eq(i).find('.price-condition');
+					if (item) {
+						collection.push(new Item(item,image,artist,title,price));
+					};
+			}
+			parse.result = collection;
+			parse.build(collection);
+		},
+		build : function(arr){
+			for (var i = 0; i < arr.length; i++){
+				// add items to flow
+				$('#content').append('<div class="item"></div').append('<img class="content" src="'+arr[i].image+'">');
+				
+			}
+		}
+}
+
+/*Class to house items*/
+function Item (item, image, artist, title, price){
+	this.item = item || null,
+	this.image = image || null,
+	this.artist = artist || null,
+	this.title = title || null,
+	this.price = price || null
+}
+
+parse.go();
+
+</script>
+</body>
+</html>

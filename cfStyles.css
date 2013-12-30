@@ -1,0 +1,70 @@
+
+#cfContainer {
+	position: absolute;
+	left: 50%;
+	margin-left: -450px;
+	margin-top: 10px;
+	width: 800px;
+	height: 300px;
+	padding: 50px;
+	background: #A0A0A0;
+	box-shadow: 0px 0px 2px 2px #757373;
+}
+
+#showContents {
+    position: relative;
+    text-align:center;
+}
+
+.artist {
+   
+}
+
+.container {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+.container * {
+	text-align: center;
+}
+
+.details {
+    background-color: #EEA333;
+    border: 1px solid #79705F;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 7px;
+    display:inline-block;
+    transition: background-color,200ms;
+    -moz-transition: background-color,200ms;
+    -o-transition: background-color,200ms;
+    -webkit-transition: background-color,200ms;
+}
+
+.details:hover {
+	background-color: #ffa355;
+}
+
+.loader {
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
+.price td {
+    padding-left: 40px;
+    font-size: .9em;
+}
+
+.title {
+    font-weight:bold;
+    font-size: 1.3em;
+}
