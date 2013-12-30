@@ -14,17 +14,20 @@ var cfFns = {
 				}
 		},
 		init : function(arr){
-				/*
-				 * Init: takes array of objects ("items"), 
-				 * creates ContentFlow html,
-				 * adds items to div (passes "arr" to "build" fn),
-				 * initializes ContentFlow 
-				*/
-				this.items = arr; // assign array of objects to "items" for details processing
+				// "arr" is array of "items" (objects)
+			
+				// assign array of objects to "items" for details processing	
+				this.items = arr;
+				
+				// if css/dom elements haven't been loaded, load 'em!
 				if (!this.settings.resourcesLoaded){
 					this.loadResources();
 				}
+				
+				// instantiate ContentFlow
 				var newFlow = new ContentFlow(this.settings.flowDiv);
+				
+				// push arr to the imageloader function
 				this.loadImages(arr);
 	
 			},
@@ -35,17 +38,32 @@ var cfFns = {
 			 * "x" is the index of the currently active item in coverFlow.
 			 * Called from  ContentFlowAddOn.js's "onMakeActive" function.
 			*/
-				var container = $(document.createElement('div')); // create container
+			
+				// create container
+				var container = $(document.createElement('div')); 
 				container.attr('class','container');
+				
+				// loop though array[item] properties to generate elements
 				for (var o in this.items[x]) {
+					
+						// 'item' is for building link buttons, so needed different logic.
 						if (o == 'item'){
-							container.append($('<a>').attr('href',this.items[x][o]).attr('class','details').attr('target','_blank').html("Details"));
-							//container.append($('<a>').attr('class','details').append($('<a></a>').attr('href',this.items[x][o])));
+							container.append($('<a>')
+									 .attr('href',this.items[x][o])
+									 .attr('class','details')
+									 .attr('target','_blank')
+									 .html("Details"));
 						}
-						else if (o !== 'image'){ // image is just the src path, no need to display that
-							container.append($('<div>').attr('class',o).html(this.items[x][o]));
+
+						else if (o !== 'image'){
+							// image is just the src path, no need to display that
+							container.append($('<div>')
+									 .attr('class',o)
+									 .html(this.items[x][o]));
 							}
 					}
+				
+				// little animation for loading the details section.
 				$(this.settings.detailsDiv).animate({
 					opacity: 0
 				},200,function(){
@@ -56,49 +74,70 @@ var cfFns = {
 				
 			},
 		loadImages : function(arr){
+				// breaks objects into array of img src's,
+				// then passes that to the "_loadAllImages" function for timing
+			
 				var src = [];
 				for (var i = 0; i < arr.length; i++){
+					// ignore item if there's no image
 					if (arr[i].image){
-					src.push(arr[i].image);
+						src.push(arr[i].image);
 					}
 				}
+				// if it's a real src... 
 				if (src.length > 1) {
-				help._loadimages(src,function(){
-					cfFns.build(cfFns.items);
-					ContentFlowGlobal.Flows[0]._init();
-				});
+					help._loadimages(src,function(){
+						// populate the div
+						cfFns.build(cfFns.items);
+						
+						// once div is populated, initialize ContentFlow object
+						ContentFlowGlobal.Flows[0]._init();
+					});
 				}
 				else {
+					// the "nothing found" function
 					this.noResults();
 				}
 		},
 		loadResources : function() {
-			console.log('loading resources');
+				// just to load DOM elements.
+			
+				// this is the CSS
 				$('<link>').attr('href','cfStyles.css').attr('rel','stylesheet').attr('type','text/css').appendTo('head');
+				
+				// ContentFlow divs
 				var f = $('<div>').attr('class','flow'); // "flow" holder
 				var l = $('<div>').attr('class','loader')
 								  .append($('<img>').attr('src',this.settings.loaderIcon));
 				var s = $('<div class="scrollbar"><div class="slider"><div class="position"></div></div></div>'); // scrollbar
 				
-				
-				
+				// attach elements
 				$('#'+this.settings.flowDiv).append(f,l,s);
 	
-				
+				// set the bool so we know that they've loaded.
 				this.settings.resourcesLoaded = true;
-
 		},
 		noResults : function(){
-				console.log('empty array -- no results!');
+				// if there's nothing to load 
 				$('.loader').html(this.settings.noResultsText);
-				$('#q').focus();
+				
+				// set focus back to search bar
+				$('#q').focus(); 
 		},
 		settings : {
-				detailsDiv : '#showContent', // jQuery selector for div to show Details in
-				flowDiv : 'contentflow', 	// id for div to attach ContentFlow to.
+				// Basic settings for cfFns
+				
+				// jQuery selector for div to show Details in
+				detailsDiv : '#showContent',
+				
+				// id for div to attach ContentFlow to.
+				flowDiv : 'contentflow', 	
+				
 				loaderIcon : 'ContentFlow/img/loader.gif' ,
 				noResultsText : 'Nothing found! <br />Search for something else!',
-				resourcesLoaded : false		// bool to track if resources have been loaded yet 
+				
+				// bool to track if resources have been loaded yet
+				resourcesLoaded : false		 
 		}		
 };
 

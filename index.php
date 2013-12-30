@@ -65,8 +65,10 @@ body {
 
         
 <script>
-var get = "<?php if (isset($_GET['q'])){echo $_GET['q'];} ?>";
-$('#current').html('Showing results for: <b>' + (get.length > 0 ? get : 'Metallica!') + '</b>');
+var get = "<?php if (isset($_GET['q'])){echo $_GET['q'];} ?>"; // set by php to grab current search term
+$('#current').html('Showing results for: <b>' + (get.length > 0 ? get : 'Metallica!') + '</b>'); // Metallica is the "cached"/default page
+
+// Stick all parse/processing logic in the "parse" namespace for use with ajax function
 var parse = {
 		go : function() {
 			$.ajax({
@@ -87,32 +89,37 @@ var parse = {
 					var artist = $.trim(doc.find('.product-artist').eq(i).html());
 					var price = doc.find('.product-variant-price-list').eq(i).find('.price-condition');
 					if (image.indexOf('bullmoose.com') < 1 && image.indexOf('bm_files') < 1) {
-							image = http+image;
+							image = http+image; // change domain for images
 						}
 					if (item) {
-						item = http+item;
+						item = http+item; 		// change domain for links 
+
+						// add "item" of all relevant properties to collection of items
 						collection.push(new Item(item,image,artist,title,price));
-						//console.log(image);
 					};
 			}
-			//cfFns.items = collection;
-			cfFns.init(collection); // pass array of objects to "contentflowFunctions" initialization
+			// pass array of objects to "contentflowFunctions" initialization.
+			cfFns.init(collection); 
 		}
 };
 
+// add DOM elements and load their styles (cfStyles.css)
 cfFns.loadResources();
-parse.go(); // load html snippet, parse, initialize coverflow
+//load html snippet, parse, initialize coverflow
+parse.go();
+
+// enable the "GO!" button
 $('#go').click(function(){
 	$('#searchForm').submit();
 });
 
 /*Class to house items*/
 function Item (item, image, artist, title, price){
-	this.item = item || null,
-	this.image = image || null,
-	this.artist = artist || null,
-	this.title = title || null,
-	this.price = price || null
+	this.item = item,
+	this.image = image,
+	this.artist = artist,
+	this.title = title,
+	this.price = price
 }
 </script>
 

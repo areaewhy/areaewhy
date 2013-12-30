@@ -1,40 +1,38 @@
 <?php
 
-
 $q = '';
+// if no query, load the "cached" page
 $url = 'bm.htm';
+
+// else
 if (!empty($_POST['q'])){
 $url = 'http://www.bullmoose.com';
 $url .= '/search?q='.urlencode($_POST['q']);
 }
-	//$url = 'bm.htm';
-	//echo $url;
 
+// grab the whole html page
 $request = file($url);
 
-
 foreach($request as $part){
-
-//echo $part;
-@$html .= $part;	// stuff the parts into $html
+// stuff the parts into $html
+@$html .= $part;
 }
-//echo $html;
-
-/*Begin DOM experiment*/
 
 $dom = new DOMDocument;
+
 // remove the "invalid HTML" errors
 libxml_use_internal_errors(true);
+
 $dom->loadHTML($html);
 
-/*Attempt to grab Title and Content*/
 $xpath = new DOMXPath($dom);
+
+// 'product-list' contains the list of retrieved items
 $classname = 'product-list';
 $nodes = $xpath->query("//*[@class='$classname']");
 
 foreach($nodes as $node){
-	//print_r($node);
-	$innerHTML = '';
+	$innerHTML = ''; // var for storing html
 	
 	$children = $node->childNodes;
 	foreach ($children as $child){
@@ -45,12 +43,23 @@ foreach($nodes as $node){
 		}
 	}
 }
+
+/*
+ * !! When converting the string to html in jQuery,
+ * the "src" attribute was attempting to load all images before
+ * I had a chance to change the local src to the correct domain.
+ * All I need is the src path anyway, so changing "src" to "_src".
+ */
 $innerHTML = str_replace('src','_src',$innerHTML);
+
+// gimme that html.
 echo($innerHTML);
 
 
 /*	
- * Experiment with pulling each element ( picture, artist, title, etc..) 
+ * Experiment with pulling each element ( picture, artist, title, etc..)
+ * This is how I would go to get prox.php to return a json collection, instead
+ * of having the jQuery parse through HTML. Leaving it for future reference. 
 
 $pic = $xpath->query("//*[@class='picture']/a/img/@src",$node);
  foreach($pic as $p){
@@ -84,26 +93,3 @@ echo $p->textContent;
 echo "<br>";
 }
 */
-
-/*	
-	$DOM2 = new DOMDocument();
-	$DOM2->loadHTML($innerHTML);
-	
-	$images = $DOM2->getElementsByTagName('img');
-	$innerHTML2 = '';
-	foreach($images as $img){
-		$img->setAttribute('class','item');
-//		if (strpos($img->getAttribute('src'),'bullmoose') == 0){
-			//echo strpos($img->getAttribute('src'),'http');
-//$img->setAttribute('src','http://www.bullmoose.com'.$img->getAttribute('src'));}
-		$tmp_doc = new DOMDocument();
-		$tmp_doc->appendChild($tmp_doc->importNode($img,true));
-		$innerHTML2 .= $tmp_doc->saveHTML();
-	}
-	
-	//var_dump($images);
-	
-	echo trim($innerHTML2);
-}
-*/
-?>
