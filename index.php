@@ -92,8 +92,9 @@ var parse = {
 							image = http+image; // change domain for images
 						}
 					if (item) {
-						item = http+item; 		// change domain for links 
-
+						if (item.indexOf('bullmoose.com') < 1){
+							item = http+item; 		// change domain for links 
+						}
 						// add "item" of all relevant properties to collection of items
 						collection.push(new Item(item,image,artist,title,price));
 					};
