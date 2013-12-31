@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <script src = "//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="./ContentFlow/contentflow.js" load="BM"></script>
+<script type="text/javascript" src="./ContentFlow/contentflow.js" data-load="BM"></script>
 <script src="cfFns.js"></script>
 <style>
 body {
@@ -50,10 +51,11 @@ body {
 	font-size: 1.8em;
 }
 </style>
+<title>Search Flow</title>
 </head>
 
 <body>
-<form action="" method="GET" id="searchForm">
+<form action="index.php" method="GET" id="searchForm">
 <input type="text" name="q" id="q" placeholder="locate awesomeness?">
 <a href="javascript:void(0)" id="go">Go!</a>
 <label id="current"></label>

@@ -150,7 +150,6 @@ new ContentFlowAddOn ('BM', {
          */
         onReachTarget: function(item) {
 			/* Modulus to grab current index position. */
-			console.log(this._targetPosition,this.items.length);
 			cfFns.loadDetails(this._activeItem.index);
 		},
 
